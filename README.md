@@ -30,3 +30,10 @@ rag-endee/
 ├── .env                    # API keys (not committed)
 └── endee_data/             # Persistent vector storage (Docker volume)
 ```
+
+### Prerequisites
+Make sure you have the following installed:
+- Python 3.9+
+- Docker & Docker Compose
+- Hugging Face API key
+- Groq API key
