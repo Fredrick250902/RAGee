@@ -45,5 +45,6 @@ Create a .env file in the project root:
 
 ```mermaid
 graph TD
-A --> B
+A --> B;
+B --> A;
 ```
