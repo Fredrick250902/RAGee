@@ -44,9 +44,10 @@ Create a .env file in the project root:
 - GROQ_API_KEY = your_groq_api_key
 
 ```mermaid
-graph TD
-    A[Start Process] --> B{Decision Point};
-    B -- Yes --> C[Proceed with Action];
-    B -- No --> D[End Process];
-    C --> D;
-
+graph TD;
+    User([User]) --> UI[Streamlit UI];
+    UI -->|PDF / Query| Embed[Hugging Face Embeddings];
+    Embed -->|384d Vectors| DB[(Endee Vector DB)];
+    DB -->|Top-k Context| LLM[Groq LLaMA 3.3 70B];
+    LLM -->|Answer| UI;
+```
