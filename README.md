@@ -43,22 +43,10 @@ Create a .env file in the project root:
 - HF_API_KEY = your_huggingface_api_key
 - GROQ_API_KEY = your_groq_api_key
 
-'''mermaid
-flowchart TB
-    U[User] -->|Upload PDF / Ask Query| S[Streamlit App]
 
-    S -->|Extract & Chunk PDF| C[Chunking Logic]
-    C -->|Text Chunks| E[HF Embeddings<br/>MiniLM 384d]
-
-    E -->|Vectors| V[Endee Vector DB<br/>Local + Docker]
-
-    S -->|Query Text| E2[HF Embeddings<br/>Query Vector]
-    E2 -->|Query Vector| V
-
-    V -->|Top-K Relevant Chunks| R[Retrieved Context]
-
-    R -->|Context| L[Groq LLaMA 3.3 70B]
-    L -->|Answer| S
-
-    S -->|Response| U
-'''
+graph TD
+    User([User]) --> UI[Streamlit UI]
+    UI -->|PDF / Query| Embed[Hugging Face Embeddings]
+    Embed -->|384d Vectors| DB[(Endee Vector DB)]
+    DB -->|Top-k Context| LLM[Groq LLaMA 3.3 70B]
+    LLM -->|Answer| UI
