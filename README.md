@@ -28,7 +28,6 @@ rag-endee/
 ├── docker-compose.yml      # Endee vector DB service
 ├── requirements.txt        # Python dependencies
 ├── .env                    # API keys (not committed)
-│
 └── endee_data/             # Persistent vector storage (Docker volume)
 ```
 
