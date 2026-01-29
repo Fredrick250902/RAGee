@@ -45,9 +45,8 @@ Create a .env file in the project root:
 
 ```mermaid
 graph TD;
-    User([User]) --> UI[Streamlit UI];
-    UI -->|PDF / Query| Embed[Hugging Face Embeddings];
-    Embed -->|384d Vectors| DB[(Endee Vector DB)];
-    DB -->|Top-k Context| LLM[Groq LLaMA 3.3 70B];
-    LLM -->|Answer| UI;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
