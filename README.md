@@ -44,9 +44,9 @@ Create a .env file in the project root:
 - GROQ_API_KEY = your_groq_api_key
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
+graph TD
+    A[Start Process] --> B{Decision Point};
+    B -- Yes --> C[Proceed with Action];
+    B -- No --> D[End Process];
+    C --> D;
+
