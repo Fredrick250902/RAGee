@@ -9,12 +9,14 @@ This project uses:
 
 ### Why Endee?
 Endee is chosen as the vector database for this project because it offers a rare combination of performance, flexibility, and simplicity, especially for local and self-hosted RAG applications.
+
 While many vector databases focus on managed or cloud-first setups, Endee provides:
 - High-performance ANN search using HNSW
 - Explicit quantization control (INT8, INT16, FLOAT16, etc.) to balance speed, memory, and accuracy
 - Native metadata and advanced filtering
 - Hybrid search capabilities
 - Persistent local storage via Docker volumes
+
 Although some vector databases also support quantization, these features are often coupled with heavier infrastructure requirements or more complex configuration. Endee exposes quantization and other performance optimizations in a lightweight, developer-friendly manner, making it well suited for experimentation, local RAG workflows, and production-ready prototypes with minimal operational overhead.
 
 ### Project Structure
