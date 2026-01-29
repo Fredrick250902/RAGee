@@ -31,3 +31,10 @@ rag-endee/
 └── endee_data/             # Persistent vector storage (Docker volume)
 ```
 
+flowchart TD
+    U[User] -->|PDF Upload / Query| S[Streamlit UI]
+    S -->|Chunks & Queries| E[HF Embeddings<br/>(MiniLM - 384d)]
+    E --> V[Endee Vector DB<br/>(Local, Dockerized)]
+    V -->|Top-k Semantic Search| L[Groq LLaMA 3.3<br/>(70B)]
+    L --> A[Answer<br/>(Context-only)]
+
