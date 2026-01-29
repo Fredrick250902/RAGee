@@ -20,16 +20,3 @@ While many vector databases focus on managed or cloud-first setups, Endee provid
 Although some vector databases also support quantization, these features are often coupled with heavier infrastructure requirements or more complex configuration. Endee exposes quantization and other performance optimizations in a lightweight, developer-friendly manner, making it well suited for experimentation, local RAG workflows, and production-ready prototypes with minimal operational overhead.
 
 ### Project Structure
-rag-endee/
-
-├── app.py                   Streamlit RAG application
-
-├── utils.py                 PDF processing + embedding utilities
-
-├── docker-compose.yml       Endee vector DB service
-
-├── requirements.txt         Python dependencies
-
-├── .env                     API keys (not committed)
-
-└── endee_data/              Persistent vector storage (Docker volume)
