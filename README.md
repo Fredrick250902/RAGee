@@ -22,14 +22,14 @@ Although some vector databases also support quantization, these features are oft
 ### Project Structure
 rag-endee/
 
-├── app.py                  # Streamlit RAG application
+├── app.py                   Streamlit RAG application
 
-├── utils.py                # PDF processing + embedding utilities
+├── utils.py                 PDF processing + embedding utilities
 
-├── docker-compose.yml      # Endee vector DB service
+├── docker-compose.yml       Endee vector DB service
 
-├── requirements.txt        # Python dependencies
+├── requirements.txt         Python dependencies
 
-├── .env                    # API keys (not committed)
+├── .env                     API keys (not committed)
 
-└── endee_data/              # Persistent vector storage (Docker volume)
+└── endee_data/              Persistent vector storage (Docker volume)
