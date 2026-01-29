@@ -1,4 +1,4 @@
-## RAGee
+## ⚡ RAGee
 A Retrieval-Augmented Generation (RAG) application that allows users to upload PDFs, index them into a local vector database (Endee), and query them using a large language model with semantic search.
 This project uses:
 - Endee for local vector storage
@@ -7,7 +7,7 @@ This project uses:
 - Streamlit for the UI
 - Docker Compose for running Endee locally
 
-### Why Endee?
+### ✅ Why Endee?
 Endee is chosen as the vector database for this project because it offers a rare combination of performance, flexibility, and simplicity, especially for local and self-hosted RAG applications.
 
 While many vector databases focus on managed or cloud-first setups, Endee provides:
@@ -19,7 +19,7 @@ While many vector databases focus on managed or cloud-first setups, Endee provid
 
 Although some vector databases also support quantization, these features are often coupled with heavier infrastructure requirements or more complex configuration. Endee exposes quantization and other performance optimizations in a lightweight, developer-friendly manner, making it well suited for experimentation, local RAG workflows, and production-ready prototypes with minimal operational overhead.
 
-### Project Structure
+### 🏗️ Project Structure
 ```text
 rag-endee/
 │
@@ -31,9 +31,34 @@ rag-endee/
 └── endee_data/             # Persistent vector storage (Docker volume)
 ```
 
-### Prerequisites
+### ⚙️ Prerequisites
 Make sure you have the following installed:
 - Python 3.9+
 - Docker & Docker Compose
 - Hugging Face API key
 - Groq API key
+
+### 🔐 Environment Variables
+Create a .env file in the project root:
+- HF_API_KEY = your_huggingface_api_key
+- GROQ_API_KEY = your_groq_api_key
+
+'''mermaid
+flowchart TB
+    U[User] -->|Upload PDF / Ask Query| S[Streamlit App]
+
+    S -->|Extract & Chunk PDF| C[Chunking Logic]
+    C -->|Text Chunks| E[HF Embeddings<br/>MiniLM 384d]
+
+    E -->|Vectors| V[Endee Vector DB<br/>Local + Docker]
+
+    S -->|Query Text| E2[HF Embeddings<br/>Query Vector]
+    E2 -->|Query Vector| V
+
+    V -->|Top-K Relevant Chunks| R[Retrieved Context]
+
+    R -->|Context| L[Groq LLaMA 3.3 70B]
+    L -->|Answer| S
+
+    S -->|Response| U
+'''
