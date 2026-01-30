@@ -55,37 +55,37 @@ Create a .env file in the project root:
 
 ### 📦 Installation
 1️. Clone the Repository
-   git clone https://github.com/your-username/rag-endee.git
-   cd rag-endee
+- git clone https://github.com/your-username/rag-endee.git
+- cd rag-endee
 
 2️. Install Python Dependencies
-   pip install -r requirements.txt
+- pip install -r requirements.txt
 
 3️. Start Endee Vector Database
-   docker-compose up -d
-   This starts the Endee server at: http://localhost:8080
-   Vectors are stored persistently in endee_data/.
+- docker-compose up -d
+- This starts the Endee server at: http://localhost:8080
+- Vectors are stored persistently in endee_data/.
 
 4️. Run the Streamlit App
-   streamlit run app.py
-   The app will be available at: http://localhost:8501
+- streamlit run app.py
+- The app will be available at: http://localhost:8501
 
 ### How to Use
 Step 1: Create / Select an Index
-Enter an index name (e.g. index1)
-Index names allow multiple knowledge bases
+- Enter an index name (e.g. index1)
+- Index names allow multiple knowledge bases
 
 Step 2: Upload a PDF
-Upload a PDF file
-Click Index Document
-Chunks are embedded and stored in Endee
+- Upload a PDF file
+- Click Index Document
+- Chunks are embedded and stored in Endee
 
 Step 3: Ask Questions
-Restarting the app keeps your data
-Enter the same index name
-Ask questions based on uploaded documents
+- Restarting the app keeps your data
+- Enter the same index name
+- Ask questions based on uploaded documents
 
 Non-existent Index Handling
 If you query an index that doesn’t exist:
-⚠️ You’ll get a warning
-❌ No crash
+- ⚠️ You’ll get a warning
+- ❌ No crash
