@@ -18,7 +18,7 @@ While many vector databases focus on managed or cloud-first setups, Endee provid
 - Persistent local storage via Docker volumes
 
 Although some vector databases also support quantization, these features are often coupled with heavier infrastructure requirements or more complex configuration. Endee exposes quantization and other performance optimizations in a lightweight, developer-friendly manner, making it well suited for experimentation, local RAG workflows, and production-ready prototypes with minimal operational overhead.
-
+___
 ### 🏗️ Project Structure
 ```text
 rag-endee/
@@ -30,7 +30,7 @@ rag-endee/
 ├── .env                    # API keys (not committed)
 └── endee_data/             # Persistent vector storage (Docker volume)
 ```
-
+___
 ### 🧠 Architecture Overview
 ```mermaid
 graph TD;
@@ -40,19 +40,19 @@ graph TD;
     DB -->|Top-k Context| LLM[Groq LLaMA 3.3 70B];
     LLM -->|Answer| UI;
 ```
-
+___
 ### ⚙️ Prerequisites
 Make sure you have the following installed:
 - Python 3.9+
 - Docker & Docker Compose
 - Hugging Face API key
 - Groq API key
-
+___
 ### 🔐 Environment Variables
 Create a .env file in the project root:
 - HF_API_KEY = your_huggingface_api_key
 - GROQ_API_KEY = your_groq_api_key
-
+___
 ### 📦 Installation
 1️. Clone the Repository
 - git clone https://github.com/your-username/rag-endee.git
@@ -69,7 +69,7 @@ Create a .env file in the project root:
 4️. Run the Streamlit App
 - streamlit run app.py
 - The app will be available at: http://localhost:8501
-
+___
 ### How to Use
 Step 1: Create / Select an Index
 - Enter an index name (e.g. index1)
@@ -89,13 +89,13 @@ Non-existent Index Handling :
 If you query an index that doesn’t exist:
 - ⚠️ You’ll get a warning
 - ❌ No crash
-
+___
 ### 🧩 Future Improvements
 - Dropdown for existing indexes
 - Delete / reset index support
 - Chunk & vector statistics
 - Metadata-based filtering
 - Streaming LLM responses
-
+___
 ### 📜 License
 This project is licensed under the MIT License.
