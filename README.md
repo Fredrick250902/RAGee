@@ -85,7 +85,7 @@ Step 3: Ask Questions
 - Enter the same index name
 - Ask questions based on uploaded documents
 
-Non-existent Index Handling
+Non-existent Index Handling : 
 If you query an index that doesn’t exist:
 - ⚠️ You’ll get a warning
 - ❌ No crash
