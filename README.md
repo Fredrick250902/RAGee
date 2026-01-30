@@ -6,7 +6,7 @@ This project uses:
 - Groq-hosted LLaMA 3.3 (70B) for generation
 - Streamlit for the UI
 - Docker Compose for running Endee locally
-
+___
 ### ✅ Why Endee?
 Endee is chosen as the vector database for this project because it offers a rare combination of performance, flexibility, and simplicity, especially for local and self-hosted RAG applications.
 
@@ -96,3 +96,6 @@ If you query an index that doesn’t exist:
 - Chunk & vector statistics
 - Metadata-based filtering
 - Streaming LLM responses
+
+### 📜 License
+This project is licensed under the MIT License.
