@@ -90,7 +90,7 @@ If you query an index that doesn’t exist:
 - ⚠️ You’ll get a warning
 - ❌ No crash
 
-### Future Improvements
+### 🧩 Future Improvements
 - Dropdown for existing indexes
 - Delete / reset index support
 - Chunk & vector statistics
