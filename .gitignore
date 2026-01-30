@@ -1,0 +1,26 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+myenv/
+.env/
+
+# Streamlit
+.streamlit/
+
+# Endee data (vector DB)
+endee_data/
+
+# OS files
+.DS_Store
+Thumbs.db
