@@ -1,0 +1,10 @@
+services:
+  endee-server:
+    image: endeeio/endee-server:latest
+    container_name: endee-server
+    ports:
+      - "8080:8080"
+    volumes:
+      # This bind-mounts your local 'endee_data' folder
+      - ./endee_data:/data 
+    restart: unless-stopped

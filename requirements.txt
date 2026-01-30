@@ -1,0 +1,6 @@
+streamlit
+endee
+groq
+pypdf
+requests
+python-dotenv
