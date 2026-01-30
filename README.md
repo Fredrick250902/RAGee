@@ -70,7 +70,7 @@ ___
 - streamlit run app.py
 - The app will be available at: http://localhost:8501
 ___
-### How to Use
+### 🚀 How to Use
 Step 1: Create / Select an Index
 - Enter an index name (e.g. index1)
 - Index names allow multiple knowledge bases
