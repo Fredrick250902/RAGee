@@ -91,6 +91,7 @@ If you query an index that doesn’t exist:
 - ❌ No crash
 ___
 ### 🧩 Future Improvements
+- Hierarchical Summarization: Implement chunk-level and section-level summaries to differentiate between local (e.g., specific facts) and global (e.g., full document summary) questions, reducing hallucinations for large documents.
 - Dropdown for existing indexes
 - Delete / reset index support
 - Chunk & vector statistics
